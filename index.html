@@ -18,7 +18,7 @@
         
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00ff88 0%, #ff6600 50%, #0066ff 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -27,14 +27,14 @@
         }
         
         .container {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 2rem;
             max-width: 500px;
             width: 90%;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 255, 136, 0.3);
+            border: 1px solid rgba(0, 255, 136, 0.4);
             text-align: center;
         }
         
@@ -42,7 +42,7 @@
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #00ff88, #0066ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -67,8 +67,8 @@
         
         .option {
             padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 255, 136, 0.3);
             border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -76,20 +76,20 @@
         }
         
         .option:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(0, 255, 136, 0.1);
+            border-color: rgba(0, 255, 136, 0.6);
             transform: translateY(-2px);
         }
         
         .option.selected {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-color: #fff;
+            background: linear-gradient(45deg, #ff6600, #0066ff);
+            border-color: #00ff88;
         }
         
         .progress {
             width: 100%;
             height: 6px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 3px;
             margin: 1rem 0;
             overflow: hidden;
@@ -97,13 +97,13 @@
         
         .progress-bar {
             height: 100%;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #00ff88, #0066ff);
             transition: width 0.3s ease;
             border-radius: 3px;
         }
         
         .btn {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #ff6600, #0066ff);
             color: white;
             border: none;
             padding: 1rem 2rem;
@@ -117,7 +117,7 @@
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.4);
         }
         
         .btn:disabled {
@@ -135,7 +135,7 @@
             font-size: 2rem;
             font-weight: bold;
             margin: 1rem 0;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(45deg, #00ff88, #0066ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -144,7 +144,14 @@
         .ability-name {
             font-size: 1.5rem;
             margin: 1rem 0;
-            color: #ffd700;
+            color: #ff6600;
+        }
+        
+        .hunter-name {
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            color: #00ff88;
+            font-style: italic;
         }
         
         .description {
@@ -154,7 +161,7 @@
         }
         
         .share-btn {
-            background: #1DA1F2;
+            background: #0066ff;
             margin-top: 1rem;
         }
         
@@ -210,6 +217,7 @@
         <div id="results" class="result-container">
             <div class="logo">Your Nen Type</div>
             <div class="nen-type" id="nenType"></div>
+            <div class="hunter-name" id="hunterName"></div>
             <div class="ability-name" id="abilityName"></div>
             <div class="description" id="description"></div>
             <button class="btn" onclick="restartQuiz()">Take Again</button>
@@ -455,7 +463,49 @@
             };
         }
 
-        function getNenAbility(result) {
+        function generateHunterName(result) {
+            const nameElements = {
+                enhancer: {
+                    prefixes: ["Kai", "Rex", "Zeth", "Dex", "Max", "Vex"],
+                    suffixes: ["iron", "stone", "forge", "steel", "titan", "blade"]
+                },
+                emitter: {
+                    prefixes: ["Zara", "Nova", "Flux", "Ray", "Volt", "Nyx"],
+                    suffixes: ["spark", "beam", "wave", "bolt", "flare", "pulse"]
+                },
+                transmuter: {
+                    prefixes: ["Lyra", "Ziv", "Ryn", "Axel", "Kira", "Vex"],
+                    suffixes: ["shift", "morph", "flux", "phase", "twist", "warp"]
+                },
+                manipulator: {
+                    prefixes: ["Sage", "Cypher", "Voss", "Lex", "Quinn", "Zara"],
+                    suffixes: ["mind", "web", "lock", "key", "thread", "net"]
+                },
+                conjurer: {
+                    prefixes: ["Aria", "Maven", "Nyx", "Zeph", "Vale", "Ren"],
+                    suffixes: ["craft", "forge", "weave", "form", "build", "make"]
+                },
+                specialist: {
+                    prefixes: ["Enzo", "Kex", "Zara", "Onyx", "Raze", "Veil"],
+                    suffixes: ["void", "shade", "enigma", "phantom", "ghost", "myst"]
+                }
+            };
+
+            const madScientistNames = ["Voltai", "Reacta", "Chemia", "Prism", "Nexus", "Quantum"];
+            
+            if (result.traits.isMadScientist) {
+                return madScientistNames[Math.floor(Math.random() * madScientistNames.length)];
+            }
+            
+            const type = nameElements[result.primary];
+            const prefix = type.prefixes[Math.floor(Math.random() * type.prefixes.length)];
+            const suffix = type.suffixes[Math.floor(Math.random() * type.suffixes.length)];
+            
+            // Capitalize first letter of suffix for compound names
+            const capitalizedSuffix = suffix.charAt(0).toUpperCase() + suffix.slice(1);
+            
+            return `${prefix}${capitalizedSuffix}`;
+        }
             const abilities = {
                 enhancer: {
                     name: "Physical Amplification",
@@ -500,10 +550,10 @@
                 primary.description += ` You also show strong ${result.secondary} tendencies, making your abilities more versatile than typical ${result.primary}s.`;
             }
 
+        function getNenAbility(result) {
+
             return primary;
         }
-
-        function showResults() {
             const result = calculateNenType();
             const ability = getNenAbility(result);
             
@@ -553,9 +603,10 @@
 
         function shareResult() {
             const nenType = document.getElementById('nenType').textContent;
+            const hunterName = document.getElementById('hunterName').textContent.replace('Hunter Name: "', '').replace('"', '');
             const abilityName = document.getElementById('abilityName').textContent;
             
-            const shareText = `I just discovered my Hunter x Hunter nen type: ${nenType} with the ability ${abilityName}! Find out yours with this personality-based quiz.`;
+            const shareText = `I just discovered my Hunter x Hunter identity: ${hunterName} - a ${nenType} with the ability ${abilityName}! Find out yours with this personality-based quiz.`;
             
             // For Farcaster integration
             if (window.parent && window.parent.postMessage) {
