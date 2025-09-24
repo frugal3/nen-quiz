@@ -8,10 +8,598 @@
   <meta name="CocoaVersion" content="2575.7">
   <style type="text/css">
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
   </style>
 </head>
 <body>
-<p class="p1">&lt;meta property="fc:frame:image" content="https://dainty-klepon-6275dd.netlify.app" /&gt;</p>
-<p class="p1">&lt;meta property="fc:frame:post_url" content="https://dainty-klepon-6275dd.netlify.app" /&gt;</p>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Discover Your Nen Type&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta property="fc:frame" content="vNext" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta property="fc:frame:image" content="https://dainty-klepon-6275dd.netlify.app/frame-image.png" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta property="fc:frame:button:1" content="Start Quiz" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta property="fc:frame:post_url" content="https://dainty-klepon-6275dd.netlify.app/api/frame" /&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 90%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(255, 255, 255, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(45deg, #ff6b6b, #4ecdc4);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-background-clip: text;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-text-fill-color: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-clip: text;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.options {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid rgba(255, 255, 255, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: rgba(255, 255, 255, 0.4);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option.selected {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(45deg, #ff6b6b, #4ecdc4);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-bar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(45deg, #ff6b6b, #4ecdc4);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: width 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(45deg, #ff6b6b, #4ecdc4);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1rem 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn:disabled {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: not-allowed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeIn 0.5s ease-in;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nen-type {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(45deg, #ff6b6b, #4ecdc4);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-background-clip: text;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-text-fill-color: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-clip: text;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.ability-name {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ffd700;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.description {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.share-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #1DA1F2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>from { opacity: 0; transform: translateY(20px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.intro-screen {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.intro-text {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1.5rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hidden {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Intro Screen --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="intro" class="intro-screen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="logo"&gt;⚡ NEN QUIZ ⚡&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="intro-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Discover your Hunter x Hunter nen type based on your personality!<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>This quiz analyzes your traits using elements from the Big Five,<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>Enneagram, and DISC assessments to determine your unique nen abilities.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" onclick="startQuiz()"&gt;Start Your Journey&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Quiz Screen --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="quiz" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="progress"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="progress-bar" id="progressBar"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="question-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="question" id="questionText"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="options" id="optionsContainer"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn" onclick="previousQuestion()" id="prevBtn" disabled&gt;Previous&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn" onclick="nextQuestion()" id="nextBtn" disabled&gt;Next&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Results Screen --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="results" class="result-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="logo"&gt;Your Nen Type&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="nen-type" id="nenType"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="ability-name" id="abilityName"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="description" id="description"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" onclick="restartQuiz()"&gt;Take Again&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn share-btn" onclick="shareResult()"&gt;Share on Farcaster&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const questions = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Big Five - Openness</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "When faced with a new challenge, you:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Jump in with creative solutions", weights: { openness: 3, transmuter: 2, specialist: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Research thoroughly before acting", weights: { conscientiousness: 2, conjurer: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Rely on proven methods", weights: { conscientiousness: 1, enhancer: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Act quickly on instinct", weights: { extroversion: 2, emitter: 2 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "Your ideal weekend activity is:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Exploring a new hobby or skill", weights: { openness: 3, transmuter: 1, specialist: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Organizing your space or planning ahead", weights: { conscientiousness: 3, conjurer: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Socializing with friends", weights: { extroversion: 3, emitter: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Intense physical activity or competition", weights: { extroversion: 1, enhancer: 2 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Enneagram - Type 3 (Achiever)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "Success means:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Being recognized for your achievements", weights: { type3: 3, transmuter: 1, emitter: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Making a meaningful difference", weights: { type1: 2, conjurer: 1, specialist: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Understanding complex systems", weights: { type5: 3, specialist: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Overcoming physical challenges", weights: { enhancer: 2 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// DISC - Influence</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "In group settings, you typically:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Take charge and motivate others", weights: { influence: 3, emitter: 2, transmuter: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Support others and maintain harmony", weights: { support: 3, conjurer: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Focus on getting results", weights: { drive: 3, enhancer: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Analyze and provide detailed insights", weights: { clarity: 3, specialist: 2 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Openness + Creativity</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "When solving problems, you prefer to:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Think outside the box with unique approaches", weights: { openness: 3, transmuter: 3, specialist: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Use systematic, proven methods", weights: { conscientiousness: 2, conjurer: 2, enhancer: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Act decisively with available information", weights: { extroversion: 2, emitter: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Gather extensive data before deciding", weights: { type5: 2, specialist: 1 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Enneagram Type 1 (Perfectionist)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "Your approach to rules and standards:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Rules should be followed and improved", weights: { type1: 3, conjurer: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Rules are guidelines to be adapted creatively", weights: { openness: 2, transmuter: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Rules exist to achieve better outcomes", weights: { type3: 2, enhancer: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Rules should be analyzed for their logic", weights: { type5: 2, specialist: 1 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Extroversion + Energy</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "Your energy level is typically:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "High and consistent around others", weights: { extroversion: 3, emitter: 2, transmuter: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Focused and intense when needed", weights: { conscientiousness: 2, enhancer: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Variable depending on your interests", weights: { openness: 2, transmuter: 1, specialist: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Conserved for important matters", weights: { type5: 2, conjurer: 1 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// DISC Drive + Results</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "When leading a project, you focus on:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Achieving concrete, measurable results", weights: { drive: 3, enhancer: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Inspiring the team and building morale", weights: { influence: 3, transmuter: 1, emitter: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Ensuring quality and proper procedures", weights: { support: 2, conjurer: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Understanding all aspects thoroughly", weights: { clarity: 3, specialist: 2 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Enneagram Type 5 (Investigator)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "You prefer to learn by:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Deep, independent research and analysis", weights: { type5: 3, specialist: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Hands-on experimentation and practice", weights: { openness: 2, transmuter: 2, enhancer: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Collaborative discussion and feedback", weights: { extroversion: 2, emitter: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Structured courses and proven methods", weights: { conscientiousness: 2, conjurer: 2 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Final personality integration</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>text: "Your ideal superpower would be:",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Adapting your abilities to any situation", weights: { transmuter: 3, openness: 2, specialist: 1 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Enhancing your physical capabilities", weights: { enhancer: 3, drive: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Projecting energy to influence your environment", weights: { emitter: 3, influence: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Creating complex, precise constructs", weights: { conjurer: 3, conscientiousness: 2 } },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Having a completely unique, unprecedented ability", weights: { specialist: 3, openness: 1, type5: 1 } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let currentQuestion = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let answers = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let scores = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>openness: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>conscientiousness: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>extroversion: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>type1: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>type3: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>type5: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>influence: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>support: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>drive: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>clarity: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>enhancer: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>emitter: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transmuter: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>manipulator: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>conjurer: 0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>specialist: 0</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function startQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('intro').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('quiz').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const question = questions[currentQuestion];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('questionText').textContent = `${currentQuestion + 1}. ${question.text}`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const optionsContainer = document.getElementById('optionsContainer');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>optionsContainer.innerHTML = '';</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>question.options.forEach((option, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const optionDiv = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optionDiv.classList.add('option');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optionDiv.textContent = option.text;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optionDiv.onclick = () =&gt; selectOption(index);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>optionsContainer.appendChild(optionDiv);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateProgress();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateButtons();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function selectOption(index) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const options = document.querySelectorAll('.option');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>options.forEach(option =&gt; option.classList.remove('selected'));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>options[index].classList.add('selected');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>answers[currentQuestion] = index;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('nextBtn').disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function nextQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (answers[currentQuestion] !== undefined) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const selectedOption = questions[currentQuestion].options[answers[currentQuestion]];</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Update scores based on selected option</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Object.keys(selectedOption.weights).forEach(trait =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>scores[trait] += selectedOption.weights[trait];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentQuestion++;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (currentQuestion &gt;= questions.length) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showResults();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function previousQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (currentQuestion &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentQuestion--;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showQuestion();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (answers[currentQuestion] !== undefined) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const options = document.querySelectorAll('.option');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>options[answers[currentQuestion]].classList.add('selected');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('nextBtn').disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateProgress() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const progress = ((currentQuestion) / questions.length) * 100;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('progressBar').style.width = `${progress}%`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateButtons() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('prevBtn').disabled = currentQuestion === 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('nextBtn').disabled = answers[currentQuestion] === undefined;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function calculateNenType() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Determine primary nen type based on scores</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const nenTypes = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>enhancer: scores.enhancer + (scores.drive * 0.5) + (scores.conscientiousness * 0.3),</p>
+<p class="p1"><span class="Apple-converted-space">                </span>emitter: scores.emitter + (scores.influence * 0.5) + (scores.extroversion * 0.3),</p>
+<p class="p1"><span class="Apple-converted-space">                </span>transmuter: scores.transmuter + (scores.openness * 0.4) + (scores.type3 * 0.3),</p>
+<p class="p1"><span class="Apple-converted-space">                </span>manipulator: scores.manipulator + (scores.clarity * 0.5) + (scores.type1 * 0.3),</p>
+<p class="p1"><span class="Apple-converted-space">                </span>conjurer: scores.conjurer + (scores.conscientiousness * 0.4) + (scores.support * 0.3),</p>
+<p class="p1"><span class="Apple-converted-space">                </span>specialist: scores.specialist + (scores.type5 * 0.5) + (scores.openness * 0.2)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Find the highest scoring nen type</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const primaryType = Object.keys(nenTypes).reduce((a, b) =&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>nenTypes[a] &gt; nenTypes[b] ? a : b</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Find secondary type (for hybrid abilities)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const sortedTypes = Object.entries(nenTypes).sort((a, b) =&gt; b[1] - a[1]);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const secondaryType = sortedTypes[1][0];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Determine personality traits for ability naming</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const personalityTraits = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>isCreative: scores.openness &gt; 8,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>isAchiever: scores.type3 &gt; 6,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>isAnalytical: scores.type5 &gt; 6,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>isInfluential: scores.influence &gt; 6,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>isMadScientist: scores.openness &gt; 8 &amp;&amp; (scores.type3 &gt; 4 || scores.type5 &gt; 4)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>return {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>primary: primaryType,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>secondary: secondaryType,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>traits: personalityTraits,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>scores: nenTypes</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function getNenAbility(result) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const abilities = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>enhancer: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: "Physical Amplification",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>description: "You excel at enhancing your physical capabilities and those of objects you touch. Your nen strengthens your body's natural abilities to their maximum potential.",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>special: result.traits.isAchiever ? "Success Surge - Your abilities amplify dramatically when working toward important goals." : ""</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>emitter: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: "Energy Projection",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>description: "You can project your aura over distances, creating ranged attacks or supportive effects. Your emotional state directly influences your nen's power and range.",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>special: result.traits.isInfluential ? "Inspirational Blast - Your projected energy can motivate and energize allies." : ""</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>transmuter: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: result.traits.isMadScientist ? "Emotional Alchemy" : "Adaptive Transformation",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>description: result.traits.isMadScientist ?<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"Your aura transforms based on your emotional state, creating unpredictable but powerful effects. High emotions fuel extraordinary abilities, while calm states provide precise control." :</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"You can change your aura's properties to mimic different materials, elements, or concepts. Your creativity determines the scope of your transformations.",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>special: result.traits.isCreative ? "Limitless Adaptation - You can develop new transformation patterns through experimentation." : ""</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>manipulator: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: "Strategic Control",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>description: "You excel at controlling objects, people, or situations through careful manipulation of nen. Your analytical mind makes you a master tactician.",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>special: result.traits.isAnalytical ? "System Override - You can understand and manipulate complex nen-based systems." : ""</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>conjurer: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: "Material Creation",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>description: "You can conjure physical objects from your aura with incredible detail and functionality. Your creations reflect your methodical and principled nature.",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>special: result.traits.isAchiever ? "Goal Materialization - Objects you conjure for specific achievements become more powerful." : ""</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>specialist: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: result.traits.isMadScientist ? "Chaotic Genius" : "Unique Phenomenon",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>description: result.traits.isMadScientist ?</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"Your ability defies conventional nen categories, combining multiple types in ways that shouldn't be possible. Your emotional volatility creates breakthrough moments of incredible power." :</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"You possess a completely unique ability that doesn't fit standard nen categories. Your independent nature has developed something truly one-of-a-kind.",</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>special: result.traits.isAnalytical ? "Pattern Recognition - You can understand and replicate others' nen abilities through observation." : ""</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const primary = abilities[result.primary];</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Add hybrid elements if secondary type is strong</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (result.scores[result.secondary] &gt; result.scores[result.primary] * 0.8) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>primary.description += ` You also show strong ${result.secondary} tendencies, making your abilities more versatile than typical ${result.primary}s.`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>return primary;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showResults() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const result = calculateNenType();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ability = getNenAbility(result);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('quiz').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('results').classList.remove('hidden');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Capitalize nen type name</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const nenTypeName = result.primary.charAt(0).toUpperCase() + result.primary.slice(1);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('nenType').textContent = nenTypeName;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('abilityName').textContent = `"${ability.name}"`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>let description = ability.description;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (ability.special) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description += `\n\nSpecial Trait: ${ability.special}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('description').textContent = description;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function restartQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>currentQuestion = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>answers = [];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scores = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>openness: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>conscientiousness: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>extroversion: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type1: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type3: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type5: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>influence: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>support: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>drive: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>clarity: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>enhancer: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>emitter: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>transmuter: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>manipulator: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>conjurer: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>specialist: 0</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('results').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('quiz').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function shareResult() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const nenType = document.getElementById('nenType').textContent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const abilityName = document.getElementById('abilityName').textContent;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const shareText = `I just discovered my Hunter x Hunter nen type: ${nenType} with the ability ${abilityName}! Find out yours with this personality-based quiz.`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// For Farcaster integration</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (window.parent &amp;&amp; window.parent.postMessage) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.parent.postMessage({</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>type: 'createCast',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>text: shareText,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>embeds: [window.location.href]</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, '*');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Fallback for testing</p>
+<p class="p1"><span class="Apple-converted-space">                </span>navigator.clipboard.writeText(shareText + ' ' + window.location.href);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('Result copied to clipboard! You can now share it on Farcaster.');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initialize app</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Frame integration for Farcaster</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (window.parent !== window &amp;&amp; window.addEventListener) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.addEventListener('message', function(event) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (event.data &amp;&amp; event.data.type === 'fc_frame_button_clicked') {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>startQuiz();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
 </body>
 </html>
